@@ -10,7 +10,7 @@ Note that you need api key to use their api.
 
 Add this line to your application's Gemfile:
 
-    gem 'enigma'
+    gem 'enigma_io'
 
 And then execute:
 
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install enigma
+    $ gem install enigma_io
 
 ## Usage
 
