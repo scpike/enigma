@@ -44,7 +44,7 @@ module Enigma
         begin
           tmp = write_tmp
           contents = nil
-          Zip::ZipFile.open(tmp.path) do |zipfile|
+          Zip::File.open(tmp.path) do |zipfile|
             contents = zipfile.first.get_input_stream.read
           end
           contents

@@ -1,5 +1,4 @@
 # encoding: utf-8
-require 'zip/zip'
 require 'test_helper'
 
 class ExportTest < Test::Unit::TestCase
