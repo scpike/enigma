@@ -30,7 +30,11 @@ Basic usage is straightforward. There are also more detailed [data api examples]
 
     client.meta('us.gov.whitehouse.visitor-list')
 
-    client.data('us.gov.whitehouse.visitor-list')
+    res = client.data('us.gov.whitehouse.visitor-list')
+
+    # get some data
+
+    res.result.map { |r| ... }
 
     client.stats('us.gov.whitehouse.visitor-list', select: 'type_of_access')
 

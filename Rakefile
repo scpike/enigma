@@ -17,4 +17,12 @@ task :rubocop do |t|
   sh 'rubocop'
 end
 
+task :build => :gendoc do
+  system "gem build enigma.gemspec"
+end
+
+task :release => :build do
+  system "gem push enigma-#{Enigma::VERSION}.gem"
+end
+
 task default: [:test, :rubocop]
