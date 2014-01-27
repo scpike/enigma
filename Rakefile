@@ -18,11 +18,11 @@ task :rubocop do |t|
 end
 
 task :build => :gendoc do
-  system "gem build enigma.gemspec"
+  system "gem build enigma_io.gemspec"
 end
 
 task :release => :build do
-  system "gem push enigma-#{Enigma::VERSION}.gem"
+  system "gem push enigma_io-#{Enigma::VERSION}.gem"
 end
 
 task default: [:test, :rubocop]
