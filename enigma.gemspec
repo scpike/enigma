@@ -26,5 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'hashie'
   spec.add_runtime_dependency 'rubyzip', '>= 1.0.0'
 
-  spec.required_ruby_version = '>= 1.9.2'
+  spec.required_ruby_version = '>= 1.9.3'
 end

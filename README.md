@@ -1,6 +1,6 @@
 # Ruby client for the enigma api
 
-Ruby client for the enigma api located at https://app.enigma.io/api
+Ruby client for the enigma api located at https://app.enigma.io/api. Supports ruby >= 1.9.3
 
 Note that you need api key to use their api.
 
