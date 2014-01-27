@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - "1.9.2"
+  - "1.9.3"
+  - jruby-19mode # JRuby in 1.9 mode
+
+# uncomment this line if your project needs to run something other than `rake`:
+# script: bundle exec rspec spec
+before_install: gem update --remote bundler
+
+script:
+  - bundle exec rake test
+  - bundle exec rubocop

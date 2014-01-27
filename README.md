@@ -4,6 +4,8 @@ Ruby client for the enigma api located at https://app.enigma.io/api
 
 Note that you need api key to use their api.
 
+[![Build Status](https://travis-ci.org/scpike/enigma.png?branch=master)](https://travis-ci.org/scpike/enigma)
+
 ## Installation
 
 Add this line to your application's Gemfile:

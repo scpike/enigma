@@ -9,6 +9,7 @@ require 'typhoeus'
 require 'net/https'
 require 'uri'
 require 'json'
+require 'rubyzip'
 require 'zip/zipfilesystem'
 require 'csv'
 
