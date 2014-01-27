@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.enigma.io/v2/export/test-key/us.gov.whitehouse.visitor-list
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.9
+      Date:
+      - Sun, 26 Jan 2014 22:10:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '302'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - ! '*'
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"datapath\": \"us.gov.whitehouse.visitor-list\",\n  \"success\":
+        true,\n  \"export_url\": \"www.example.com\"\n}"
+    http_version:
+  recorded_at: Sun, 26 Jan 2014 22:11:57 GMT
+recorded_with: VCR 2.8.0

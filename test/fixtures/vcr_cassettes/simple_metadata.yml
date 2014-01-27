@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.enigma.io/v2/meta/test-key/us.gov.whitehouse.salaries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.9
+      Date:
+      - Sun, 26 Jan 2014 18:58:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2805'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Etag:
+      - ! '"1839071709"'
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"datapath\": \"us.gov.whitehouse.salaries\",\n  \"success\":
+        true,\n  \"info\": {\n    \"result_type\": \"parent\",\n    \"children_tables_limit\":
+        50,\n    \"children_tables_total\": 4,\n    \"current_page\": 1,\n    \"total_pages\":
+        1\n  },\n  \"result\": {\n    \"path\": [\n      {\n        \"level\": \"us\",\n
+        \       \"label\": \"United States\",\n        \"description\": \"United States\"\n
+        \     },\n      {\n        \"level\": \"gov\",\n        \"label\": \"U.S.
+        Federal Government\",\n        \"description\": \"Government comprising the
+        Legislative, Executive, and Judicial branches of the United States of America.\"\n
+        \     },\n      {\n        \"level\": \"whitehouse\",\n        \"label\":
+        \"The White House\",\n        \"description\": \"Located at 1600 Pennsylvania
+        Avenue in Washington D.C., the White House has served as the home and office
+        for every U.S. president since John Adams.\"\n      },\n      {\n        \"level\":
+        \"White House Salaries\",\n        \"label\": \"White House Salaries\",\n
+        \       \"description\": \"The White House has been required to deliver a
+        report to Congress listing the title and salary of every White House Office
+        employee since 1995.  Consistent with President Obama's commitment to transparency,
+        this report is being publicly disclosed on our website as it is transmitted
+        to Congress.  In addition, this report also contains the title and salary
+        details of administration officials who work at the Office of Policy Development,
+        including the Domestic Policy Council and the National Economic Council --
+        along with White House Office employees.\"\n      }\n    ],\n    \"immediate_nodes\":
+        [],\n    \"children_tables\": [\n      {\n        \"datapath\": \"us.gov.whitehouse.salaries.2009\",\n
+        \       \"label\": \"2009\",\n        \"description\": \"Information regarding
+        White House Office employee salaries for 2009.\",\n        \"db_boundary_datapath\":
+        \"us.gov.whitehouse.salaries\",\n        \"db_boundary_label\": \"White House
+        Salaries\"\n      },\n      {\n        \"datapath\": \"us.gov.whitehouse.salaries.2010\",\n
+        \       \"label\": \"2010\",\n        \"description\": \"Information regarding
+        White House Office employee salaries for 2010.\",\n        \"db_boundary_datapath\":
+        \"us.gov.whitehouse.salaries\",\n        \"db_boundary_label\": \"White House
+        Salaries\"\n      },\n      {\n        \"datapath\": \"us.gov.whitehouse.salaries.2011\",\n
+        \       \"label\": \"2011\",\n        \"description\": \"Information regarding
+        White House Office employee salaries for 2011.\",\n        \"db_boundary_datapath\":
+        \"us.gov.whitehouse.salaries\",\n        \"db_boundary_label\": \"White House
+        Salaries\"\n      },\n      {\n        \"datapath\": \"us.gov.whitehouse.salaries.2012\",\n
+        \       \"label\": \"2012\",\n        \"description\": \"Information regarding
+        White House Office employee salaries for 2012.\",\n        \"db_boundary_datapath\":
+        \"us.gov.whitehouse.salaries\",\n        \"db_boundary_label\": \"White House
+        Salaries\"\n      }\n    ]\n  }\n}"
+    http_version:
+  recorded_at: Sun, 26 Jan 2014 18:59:55 GMT
+recorded_with: VCR 2.8.0

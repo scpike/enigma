@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.enigma.io/v2/data/test-key/us.gov.whitehouse.visitor-list?limit=1&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.9
+      Date:
+      - Sun, 26 Jan 2014 21:21:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1158'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Etag:
+      - ! '"-986426965"'
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"datapath\": \"us.gov.whitehouse.visitor-list\",\n  \"success\":
+        true,\n  \"info\": {\n    \"rows_limit\": 1,\n    \"total_results\": 3427529,\n
+        \   \"total_pages\": 3427529,\n    \"current_page\": 2\n  },\n  \"result\":
+        [\n    {\n      \"namelast\": \"BOUL\",\n      \"namefirst\": \"DAVID\",\n
+        \     \"namemid\": null,\n      \"namefull\": \"DAVID BOUL\",\n      \"uin\":
+        \"U17331\",\n      \"bdgnbr\": null,\n      \"type_of_access\": \"VA\",\n
+        \     \"toa\": null,\n      \"poa\": null,\n      \"tod\": null,\n      \"pod\":
+        null,\n      \"appt_made_date\": \"2010-06-17T20:38:00.000Z\",\n      \"appt_start_date\":
+        \"2010-06-22T21:00:00.000Z\",\n      \"appt_end_date\": \"2010-06-23T03:59:00.000Z\",\n
+        \     \"appt_cancel_date\": null,\n      \"total_people\": \"388\",\n      \"last_updatedby\":
+        \"J7\",\n      \"post\": \"WIN\",\n      \"lastentrydate\": \"2010-06-17T20:38:00.000Z\",\n
+        \     \"terminal_suffix\": \"J7\",\n      \"visitee_namelast\": \"POTUS\",\n
+        \     \"visitee_namefirst\": null,\n      \"meeting_loc\": \"WH\",\n      \"meeting_room\":
+        \"STATE FLOO\",\n      \"caller_name_last\": \"GALLAGHER\",\n      \"caller_name_first\":
+        \"CLARE\",\n      \"caller_room\": null,\n      \"description\": null,\n      \"release_date\":
+        \"2010-09-24T00:00:00.000Z\",\n      \"serialid\": 2\n    }\n  ]\n}"
+    http_version:
+  recorded_at: Sun, 26 Jan 2014 21:22:24 GMT
+recorded_with: VCR 2.8.0
