@@ -2,7 +2,7 @@
 module Enigma
   # The export endpoint has no filtering, but it returns a URL where
   # the download will eventually be available. This client will
-  # default to waiting for the file to be available before continuing
+  # return a `Download` object which can be asked to go get the file
   #
   class Export < Endpoint
     attr_accessor :download, :unzip

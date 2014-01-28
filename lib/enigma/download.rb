@@ -15,6 +15,9 @@ module Enigma
       self.response = res
     end
 
+    # This url is where the file will eventually be available. Returns
+    # a 404 until then
+    #
     def download_url
       response.export_url
     end
@@ -23,8 +26,15 @@ module Enigma
       response.datapath
     end
 
+    # Actually goes and fetches the download. Don't return the
+    # raw_download because it's a massive amount of data that will
+    # take over your terminal in IRB mode.
+    #
+    # @return true on success
+    #
     def get
       @raw_download ||= do_download
+      true
     end
 
     def write(io)
