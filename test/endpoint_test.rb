@@ -20,6 +20,11 @@ class EndpointTest < Test::Unit::TestCase
     assert_equal({ limit: 100 }, ep.params)
   end
 
+  def test_query_params_includes_page
+    ep = Enigma::Endpoint.new(@datapath, page: 2)
+    assert_equal({ page: 2 }, ep.params)
+  end
+
   def test_has_descendants
     assert Enigma::Endpoint.descendants.include? Enigma::Meta
   end
