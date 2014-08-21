@@ -29,6 +29,8 @@ module Enigma
       @params[:where] = serialize_where(@params[:where]) if @params[:where]
       @params[:search] = serialize_search(@params[:search]) if @params[:search]
       @params[:select] = serialize_select(@params[:select]) if @params[:select]
+      @params[:limit] = serialize_select(@params[:limit]) if @params[:limit]
+      @params[:page] = serialize_select(@params[:page]) if @params[:page]
       @params
     end
 
