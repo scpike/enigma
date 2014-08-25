@@ -10,5 +10,8 @@ TrivialAccessors:
 
 AllCops:
   Excludes:
-    - test/**
-    - examples/**
+    - Rakefile
+    - enigma_io.gemspec
+    - Gemfile
+    - test**/*
+    - examples**/*
