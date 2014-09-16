@@ -2,7 +2,7 @@
 
 Ruby client for the enigma api located at https://app.enigma.io/api. Supports ruby >= 1.9.3
 
-Note that you need api key to use their api.
+Note that you need an api key to use their api.
 
 [![Build Status](https://travis-ci.org/scpike/enigma.png?branch=master)](https://travis-ci.org/scpike/enigma)
 
