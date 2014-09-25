@@ -7,14 +7,26 @@ class ExportTest < Test::Unit::TestCase
     Enigma::Download.any_instance.stubs(:sleep)
 
     # These are identical, just one is zipped
-    @zipped = File.read 'test/fixtures/download.zip'
+    @old_zipped = File.read 'test/fixtures/download.zip'
+    @zipped = File.read 'test/fixtures/download.csv.gz'
     @unzipped = File.read 'test/fixtures/download.csv'
 
     # www.example.com is the URL in the response to the export
     # cassette
-    stub_request(:get, 'www.example.com').to_return do
+    stub_request(:get, 'www.example.com/us.gov.whitehouse.visitor-list.csv.gz').to_return do
       if @tried
         { body: @zipped }
+      else
+        @tried = true
+        { status: 404 }
+      end
+    end
+
+    # www.example.com is the URL in the response to the export
+    # cassette
+    stub_request(:get, 'www.example.com/us.gov.whitehouse.visitor-list.zip').to_return do
+      if @tried
+        { body: @old_zipped }
       else
         @tried = true
         { status: 404 }
@@ -62,6 +74,18 @@ class ExportTest < Test::Unit::TestCase
       dl = @client.export('us.gov.whitehouse.visitor-list')
       parsed = dl.parse
       assert_equal 'Steve', parsed.first[:name]
+    end
+  end
+
+  def test_writing_csv_from_old_format
+    VCR.use_cassette('export_old') do
+      # www.example.com is the URL in the response to the export
+      # cassette
+      dl = @client.export('us.gov.whitehouse.visitor-list')
+      dl.get
+      testIO = StringIO.new
+      dl.write_csv(testIO)
+      assert_equal @unzipped, testIO.string
     end
   end
 end

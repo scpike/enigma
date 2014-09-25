@@ -49,15 +49,30 @@ module Enigma
       tmp
     end
 
+    def unzip_zip
+      tmp = write_tmp
+      Zip::File.open(tmp.path) do |zipfile|
+        zipfile.first.get_input_stream.read
+      end
+    end
+
+    def unzip_gz
+      tmp = write_tmp
+      Zlib::GzipReader.open(tmp.path) do |zipfile|
+        zipfile.read
+      end
+    end
+
+    # Handle either .zip or .gz responses since they've changed the
+    # format.
     def unzip
       @download_contents ||=
         begin
-          tmp = write_tmp
-          contents = nil
-          Zip::File.open(tmp.path) do |zipfile|
-            contents = zipfile.first.get_input_stream.read
+          if download_url =~ /\.gz/
+            unzip_gz
+          else
+            unzip_zip
           end
-          contents
         end
     end
 
